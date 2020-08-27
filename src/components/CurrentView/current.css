@@ -4,8 +4,13 @@
   padding: 15px 25px 15px 25px;
   min-height: 600px;
   min-width: 375px;
-  /* debug */
-  border: 10px solid red;
+  background-color: #bababa;
+  /* border: 2px solid #333; */
+  visibility: visible;
+}
+
+.weather-container--current.hidden {
+  visibility: hidden;
 }
 
 .weather-card--date {

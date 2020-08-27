@@ -54,15 +54,17 @@ function App() {
     returnCoordinates();
   }
   console.log('testing geoData: ', geoData);
-  console.log('testing geoStatus: ', geoStatus);
+  console.log('App page: ', geoStatus);
   
   return (
     <div className="App">
       <div className="weather-card">
         <NavBar setPage={ setPage } />
-          { status === 'start' && <Alert handleGeoData={ handleGeoData}  /> }
-          { status === 'fetchingWeatherData' && <CurrentView geoData={ geoData } setPage={setPage} />  }
-          { page === 'fiveDayForecast' && <ForecastView geoData={ geoData } setPage={setPage} /> }
+          <div className="weather-container">
+            { status === 'start' && <Alert handleGeoData={ handleGeoData}  /> }
+            { status === 'fetchingWeatherData' && <CurrentView geoData={ geoData } page={page} />  }
+            { page === 'fiveDayForecast' && <ForecastView geoData={ geoData } page={page} /> }
+          </div>
       </div>
     </div>
   );

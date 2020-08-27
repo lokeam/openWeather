@@ -12,6 +12,7 @@ ul {
 
 #root {
   height: 100vh;
+  min-height: 100vh;
 }
 
 .App {
@@ -23,15 +24,23 @@ ul {
   width: 100%;
   position: relative;
 }
+/* "page" wrapper */
+.weather-container {
+  
+  height: 100%;
+  position: relative;
+  display: block;
+}
 
-.weather-card--current,
-.weather-card--forecast {
+.weather-container--current,
+.weather-container--forecast {
   height: 100%;
   width: 100%;
   position: absolute;
-  border: 10px solid blue;
+  /* border: 10px solid blue; */
   top: 0;
   left: 0;
+  display: inline-table;
 }
 
 .weather-card {
@@ -39,6 +48,8 @@ ul {
   height: 100%;
   width: 100%;
   position: relative;
-  border: 2px solid #f2f2f2;
-  border-radius: 6px;
+  background-color: #bababa;
+  /* border-left: 2px solid #333;
+  border-right: 2px solid #333; */
+  display: inline-table;
 }

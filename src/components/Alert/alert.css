@@ -1,5 +1,4 @@
 .alert-dialog {
-  border: 10px solid purple;
   display: flex;
   flex-direction: column;
   color: #f1f1f1;

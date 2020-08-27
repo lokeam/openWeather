@@ -4,18 +4,21 @@ import useFetch from '../../helpers/useFetch';
 import moment from 'moment'
 import './current.css';
 
-function CurrentView({ geoData }) {
+function CurrentView({ geoData, page }) {
 
   const url = `http://api.openweathermap.org/data/2.5/weather?lat=${geoData.lat}&lon=${geoData.lon}&units=imperial&appid=${process.env.REACT_APP_OPEN_WEATHER_MAP_API_KEY}`;
   const { status, data, error } = useFetch(url);
   let currentDateTime = moment().format('MMMM Do YYYY');
 
-  console.log('CurrentView, fetch data: ', data);
-  console.log('CurrentView, fetch status: ', status);
-  console.log('CurrentView, currentDateTime: ', currentDateTime);
+  console.log('CurrenvView, page: ', page);
+  /* show and hide currently actives pages */
+  let isHidden = page !== 'currentWeather' ? 'hidden' : '';
+  // console.log('CurrentView, fetch data: ', data);
+  // console.log('CurrentView, fetch status: ', status);
+  // console.log('CurrentView, currentDateTime: ', currentDateTime);
 
   return (
-    <div className="weather-container--current">
+    <div className={`weather-container--current ${isHidden}`}>
       {status === 'error' && (
         <div>Error fetching data</div>
       )}
