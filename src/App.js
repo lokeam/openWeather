@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import NavBar from './components/NavBar/NavBar';
 import Alert from './components/Alert/Alert';
 import CurrentView from './components/CurrentView/CurrentView';

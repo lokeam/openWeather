@@ -4,8 +4,9 @@ import './navbar.css';
 function NavBar() {
   return (
     <nav className="nav__container">
-      <ul>
-        <li>NavBar I am. Talking in Starwars Yoda-speak I am not.</li>
+      <ul className="nav__list">
+        <li onClick={ () => console.log('currentWeather') } className="nav__list--item">Today</li>
+        <li onClick={ () => console.log('fiveDayForecast') } className="nav__list--item">5 Days</li>
       </ul>
     </nav>
   )

@@ -1,5 +1,51 @@
 .alert-dialog {
   border: 10px solid purple;
-  height: 300px;
-  width: 600px;
+  display: flex;
+  flex-direction: column;
+  color: #f1f1f1;
+  background-color: #333;
+  border-radius: 4px;
+  max-width: 600px;
+  min-width: 375px;
+  max-height: calc(100% - 64px);
+  min-height: 285px;
+  padding: 16px 24px;
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+}
+
+.alert-dialog__heading {
+  font-size: 1.3rem;
+}
+
+.alert-dialog__subheading {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.alert-dialog__description {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 20px 0;
+}
+
+.alert-dialog__actions {
+  text-align: right;
+}
+
+.alert-dialog__btn {
+  background-color: transparent;
+  color: #90caf9;
+  padding: 6px 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  font-size: 0.875rem;
 }

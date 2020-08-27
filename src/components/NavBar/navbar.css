@@ -1,4 +1,24 @@
 .nav__container {
   margin: 0;
-  border: 5px solid blue;
+  border: 5px solid blue
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list--item {
+  color: #f1f1f1;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #333;
+  padding: 15px 30px;
+  width: 50%;
+  cursor: pointer;
 }
