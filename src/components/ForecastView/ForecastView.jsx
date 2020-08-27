@@ -10,10 +10,7 @@ function ForecastView({ geoData, page }) {
   const { status, data, error } = useFetch(url, true);
 
   /* show and hide currently actives pages */
-  console.log('ForecastView, page: ', page);
   let isHidden = page !== 'fiveDayForecast' ? 'hidden' : '';
-  // console.log('ForecastView data: ', data);
-  // console.log('ForecastView status: ', status);
 
 
   return (

@@ -36,7 +36,6 @@ const useFetch = (endpoint, extraParsingRequired = false) => {
 
     /* helper fn to sort through 5 day forecast */
     const sortForecastResults = (list) => {
-      console.log('sortForecastResults, list: ', list);
       const dates = list
         .map((item, i) => {
           return item.dt_txt.split(" ")[0];
@@ -89,7 +88,6 @@ const useFetch = (endpoint, extraParsingRequired = false) => {
             data.list = sortForecastResults(data.list);
           }
 
-          console.log('useFetch, try block data: ', data);
           cache.current[endpoint] = data;
 
           /* confirm if the component has been unmounted before making changes. if unmounted,

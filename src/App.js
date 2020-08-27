@@ -13,18 +13,13 @@ function App() {
   const [geoStatus, setGeoStatus] = useState('idle');
   const [page, setPage] = useState('currentWeather');
 
-   
-  console.log('app, status: ', status);
-
   // handler to get geographic coordinates for api call
   const handleGeoData = () => {
-    console.log('handleGeoData');
     setStatus('loadingGeoData');
 
     const getCoordinates = () => {
-      console.log('getCoordinates');
+
       if (navigator.geolocation) {
-        console.log('geo ok');
   
         localStorage.setItem('location-allowed', true);
         setGeoStatus('fetching');
@@ -44,7 +39,6 @@ function App() {
           lon: position.coords.longitude
         });
 
-        console.log(position);
         setStatus('fetchingWeatherData');
       } catch (err) {
         console.error(err.message);
@@ -53,8 +47,6 @@ function App() {
 
     returnCoordinates();
   }
-  console.log('testing geoData: ', geoData);
-  console.log('App page: ', geoStatus);
   
   return (
     <div className="App">

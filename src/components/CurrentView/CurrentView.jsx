@@ -10,12 +10,8 @@ function CurrentView({ geoData, page }) {
   const { status, data, error } = useFetch(url);
   let currentDateTime = moment().format('MMMM Do YYYY');
 
-  console.log('CurrenvView, page: ', page);
   /* show and hide currently actives pages */
   let isHidden = page !== 'currentWeather' ? 'hidden' : '';
-  // console.log('CurrentView, fetch data: ', data);
-  // console.log('CurrentView, fetch status: ', status);
-  // console.log('CurrentView, currentDateTime: ', currentDateTime);
 
   return (
     <div className={`weather-container--current ${isHidden}`}>

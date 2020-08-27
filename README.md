@@ -1,7 +1,18 @@
 # OpenWeather App
 
-A quick React + hooks weather app built using the [OpenWeather](https://openweathermap.org) Current Weather and 5 Day / 3 Hour Forecast APIs
+A quick React + hooks weather app built using the [OpenWeather](https://openweathermap.org) Current Weather and 5 Day / 3 Hour Forecast APIs.
+Time/date parsing courtesy of [Moment.js](https://momentjs.com/).
 
+
+## Setup
+1. Sign up for a free account at [OpenWeather](https://openweathermap.org) and get a user API key
+
+2. Create an `.env` file in at the root level of this application, folder, copy-paste this line of code into your `.env` file, substituting `YOUR-API-KEY` with **your** actual api key:
+`Example: REACT_APP_OPEN_WEATHER_MAP_API_KEY=YOUR-API-KEY`
+
+3. `yarn install` all dependencies
+
+4. `yarn start` to boot. (looks best at mobile screen sizes)
 
 ## Available Scripts
 ### `yarn start`
