@@ -13,7 +13,7 @@ ul {
 #root {
   height: 100vh;
 }
-/* 
+
 .App {
   display: flex;
   flex-direction: column;
@@ -24,15 +24,6 @@ ul {
   position: relative;
 }
 
-.weather-card {
-  max-width: 800px;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  border: 2px solid #f2f2f2;
-  border-radius: 6px;
-}
-
 .weather-card--current,
 .weather-card--forecast {
   height: 100%;
@@ -41,4 +32,13 @@ ul {
   border: 10px solid blue;
   top: 0;
   left: 0;
-} */
+}
+
+.weather-card {
+  max-width: 800px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border: 2px solid #f2f2f2;
+  border-radius: 6px;
+}

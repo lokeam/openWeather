@@ -11,6 +11,7 @@ function App() {
   const [status, setStatus] = useState('start');
   const [geoData, setGeoData] = useState({});
   const [geoStatus, setGeoStatus] = useState('idle');
+  const [page, setPage] = useState('currentWeather');
 
    
   console.log('app, status: ', status);
@@ -57,10 +58,12 @@ function App() {
   
   return (
     <div className="App">
-        <NavBar />
-        { status === 'start' && <Alert handleGeoData={ handleGeoData}  /> }
-        { status === 'fetchingWeatherData' && <CurrentView geoData={ geoData } />  }
-        <ForecastView />
+      <div className="weather-card">
+        <NavBar setPage={ setPage } />
+          { status === 'start' && <Alert handleGeoData={ handleGeoData}  /> }
+          { status === 'fetchingWeatherData' && <CurrentView geoData={ geoData } setPage={setPage} />  }
+          { page === 'fiveDayForecast' && <ForecastView geoData={ geoData } setPage={setPage} /> }
+      </div>
     </div>
   );
 }
