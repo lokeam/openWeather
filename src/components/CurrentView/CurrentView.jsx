@@ -1,4 +1,5 @@
 import React from 'react';
+import WeatherIcon from '../WeatherIcon/WeatherIcon';
 import useFetch from '../../helpers/useFetch';
 import moment from 'moment'
 import './current.css';
@@ -15,7 +16,27 @@ function CurrentView( {geoData} ) {
 
   return (
     <div className="weather-container--current">
-      <h2>Current Forecast View</h2>
+      {status === 'error' && (
+        <div>Error fetching data</div>
+      )}
+
+      {status === 'fetched' && (
+        <>
+          <p className="weather-card--name">{data.name}</p>
+          <p className="weather-card--date">{currentDateTime}</p>
+          <div className="weather-container--data">
+            <div className="weather-container__description">
+              <WeatherIcon icon={data.weather[0].icon} />
+              <p>{data.weather[0].description}</p>
+            </div>
+            <div className="weather-container__temp-data">
+              <p className="weather-container__min-max-temp">{Math.ceil(data.main.temp_max)}&deg;&uarr; {Math.ceil(data.main.temp_min)}&deg;&darr;</p>
+              <p className="weather-container__current-temp">{Math.ceil(data.main.temp)}&deg;</p>
+              <p className="weather-container__approx">Feels like {Math.ceil(data.main.feels_like)}&deg;</p>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   )
 };
