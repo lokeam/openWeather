@@ -21,4 +21,9 @@
   padding: 15px 30px;
   width: 50%;
   cursor: pointer;
+  text-align: center;
+}
+
+.nav__list--item:hover {
+  background-color: #7f7f7f;
 }

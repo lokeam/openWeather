@@ -59,7 +59,7 @@ function App() {
     <div className="App">
         <NavBar />
         { status === 'start' && <Alert handleGeoData={ handleGeoData}  /> }
-        <CurrentView />
+        { status === 'fetchingWeatherData' && <CurrentView geoData={ geoData } />  }
         <ForecastView />
     </div>
   );
